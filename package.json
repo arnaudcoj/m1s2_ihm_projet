@@ -1,0 +1,23 @@
+{
+  "name": "ihm-project",
+  "version": "1.0.0",
+  "description": "Projet d'IHM sur le thème de la prise de note",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arnaudcoj/m1s2_ihm_projet.git"
+  },
+  "keywords": [
+    "IHM",
+    "prise de note"
+  ],
+  "author": "Honoré Nintunze, Arnaud Cojez, Fabien Fache, Pierre-Claver Diarra, Salim",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/arnaudcoj/m1s2_ihm_projet/issues"
+  },
+  "homepage": "https://github.com/arnaudcoj/m1s2_ihm_projet#readme"
+}
