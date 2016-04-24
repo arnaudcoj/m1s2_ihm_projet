@@ -1,0 +1,14 @@
+@mixin alert-coloring($txt,$bg,$border) {
+  color: $txt;
+  background-color: $bg;
+  border-color: $border
+}
+.qz-alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+.qz-alert-success { @include alert-coloring($success-txt,$success-bg,$success-border); }
+.qz-alert-danger { @include alert-coloring($danger-txt,$danger-bg,$danger-border); }
+.qz-alert-info { @include alert-coloring($info-txt,$info-bg,$info-border); }
