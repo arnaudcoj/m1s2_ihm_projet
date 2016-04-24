@@ -1,16 +1,16 @@
 (->
   "use strict"
 
-  SingoutCtrl = ($state,auth) ->
+  SingoutCtrl = ($state,Auth) ->
     @signout = () ->
-      auth.signout()
+      Auth.signout()
       console.log "signed out"
-      $state.go "home.login"
+      $state.go "home.dashbord.quizee"
       return
 
     return
 
-  SingoutCtrl.$inject = ['$state','auth']
+  SingoutCtrl.$inject = ['$state','Auth']
 
   SingoutDrt = () ->
     link = (scope, element, attrs, ctrl) ->
@@ -30,8 +30,8 @@
     return directive
 
   angular
-    .module "quizee"
-    .directive "qzSignout", ['auth', SingoutDrt]
+    .module "quizee.drt"
+    .directive "qzSignout", SingoutDrt
 
   return
 )()

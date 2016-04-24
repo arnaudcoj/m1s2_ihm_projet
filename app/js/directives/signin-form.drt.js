@@ -1,7 +1,7 @@
 (function() {
   "use strict";
   var SinginFormCtrl, SinginFormDrt;
-  SinginFormCtrl = function($state, auth) {
+  SinginFormCtrl = function($state, Auth) {
     this.errorinfo = {
       visible: false,
       message: ''
@@ -10,17 +10,17 @@
     this.username = '';
     this.signin = function() {
       var loggedin;
-      loggedin = auth.signin(this.username, this.pass);
+      loggedin = Auth.signin(this.username, this.pass);
       this.errorinfo.message = !loggedin ? "Identifiant ou Mot de passe invalide. Ré-essayez." : "";
       this.errorinfo.visible = !loggedin;
-      console.log("connexion " + this.pass + " and " + this.username + ", avant", auth.islogged(), auth.current(), this.errorinfo);
+      console.log("connexion " + this.pass + " and " + this.username + ", avant", Auth.islogged(), Auth.current(), this.errorinfo);
       if (loggedin) {
         $('#signin-modal').closeModal();
-        $state.go("account.dashbord");
+        return $state.go("user.dashbord.quizee");
       }
     };
   };
-  SinginFormCtrl.$inject = ['$state', 'auth'];
+  SinginFormCtrl.$inject = ['$state', 'Auth'];
   SinginFormDrt = function() {
     var directive, link;
     link = function(scope, element, attrs, ctrl) {
@@ -37,5 +37,5 @@
     };
     return directive;
   };
-  angular.module("quizee").directive("qzSigninForm", ['auth', SinginFormDrt]);
+  angular.module("quizee.drt").directive("qzSigninForm", SinginFormDrt);
 })();

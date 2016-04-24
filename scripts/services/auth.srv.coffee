@@ -1,20 +1,22 @@
 (->
   "use strict"
 
-  Auth = ->
+  Auth = (Users) ->
     users =
-      "honore": "honore"
-      "arnaud": "arnaud"
-      "fabien": "fabien"
-      "pierre-claver": "pierre-claver"
-      "salime": "salim"
+      for user in Users.all()
+        key = Object.keys(user)[0]
+        res = {}
+        res[key] = user[key].mdp
+        res
     current = null
 
     return {
-      users
+      users: -> users
       current: -> current
       signin: (username,pass) ->
-        ok = users[username] is pass
+        u = (user for user in users when username of user)
+        ok = u[0][username] is pass if u.length is 1
+        console.log "user trouve",u,ok
         current = id: username if ok
         ok
       signout: ->
@@ -23,9 +25,11 @@
         current?
     }
 
+    Auth.$inject = ['Users']
+
   angular
-    .module "quizee"
-    .factory "auth", Auth
+    .module "quizee.srv"
+    .factory "Auth", Auth
 
   return
 )()

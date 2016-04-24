@@ -1,7 +1,7 @@
 (->
   "use strict"
 
-  SinginFormCtrl = ($state,auth) ->
+  SinginFormCtrl = ($state,Auth) ->
     @errorinfo =
       visible: no
       message: ''
@@ -10,17 +10,17 @@
     @username = ''
 
     @signin = () ->
-      loggedin = auth.signin(@username,@pass)
+      loggedin = Auth.signin(@username,@pass)
       @errorinfo.message = if not loggedin then "Identifiant ou Mot de passe invalide. Ré-essayez." else ""
       @errorinfo.visible = not loggedin
-      console.log "connexion #{@pass} and #{@username}, avant", auth.islogged(), auth.current(), @errorinfo
+      console.log "connexion #{@pass} and #{@username}, avant", Auth.islogged(), Auth.current(), @errorinfo
       if loggedin
         $('#signin-modal').closeModal()
-        $state.go "account.dashbord"
+        $state.go "user.dashbord.quizee"
 
     return
 
-  SinginFormCtrl.$inject = ['$state','auth']
+  SinginFormCtrl.$inject = ['$state','Auth']
 
   SinginFormDrt = () ->
     link = (scope, element, attrs, ctrl) ->
@@ -39,8 +39,8 @@
     return directive
 
   angular
-    .module "quizee"
-    .directive "qzSigninForm", ['auth', SinginFormDrt]
+    .module "quizee.drt"
+    .directive "qzSigninForm", SinginFormDrt
 
   return
 )()

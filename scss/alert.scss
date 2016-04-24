@@ -12,3 +12,11 @@
 .qz-alert-success { @include alert-coloring($success-txt,$success-bg,$success-border); }
 .qz-alert-danger { @include alert-coloring($danger-txt,$danger-bg,$danger-border); }
 .qz-alert-info { @include alert-coloring($info-txt,$info-bg,$info-border); }
+
+.success { background-color: $success-bg !important; }
+.danger { background-color: $danger-bg !important; }
+.info { background-color: $info-bg !important; }
+
+.success-txt { color: $success-txt !important; }
+.danger-txt { color: $danger-txt !important; }
+.info-txt { color: $info-txt !important; }

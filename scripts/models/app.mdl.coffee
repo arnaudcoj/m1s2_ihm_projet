@@ -1,7 +1,12 @@
 (->
   angular
-    .module "quizee", ['ui.router']
+    .module "quizee", ['ui.router','quizee.srv','quizee.drt']
 
+  angular
+    .module "quizee.srv", []
+
+  angular
+    .module "quizee.drt", []
 
   QuizeeConfig = ($stateProvider, $urlRouterProvider) ->
     $stateProvider
@@ -10,9 +15,9 @@
         url: '/home'
         templateUrl: 'home.html'
         abstract: true
-
-      .state 'home.login',
-        url: '/login'
+      .state 'home.dashbord',
+        url: '/dashbord'
+        abstract: true
         views:
           'header':
             templateUrl: 'header-unco.html'
@@ -21,23 +26,39 @@
           'maincontent':
             templateUrl: 'maincontent.html'
 
-      # Logged states
-      .state 'account',
-        url: '/account'
-        templateUrl: 'account.html'
-        abstract: true
+      .state 'home.dashbord.quizee',
+        url: '/quizee'
+        templateUrl: 'quizee-content.html'
+      .state 'home.dashbord.cours',
+        url: '/cours'
+        templateUrl: 'cours.html'
 
-      .state 'account.dashbord',
+      # Logged states
+      .state 'user',
+        url: '/user'
+        templateUrl: 'user.html'
+        abstract: true
+      .state 'user.dashbord',
         url: '/dashbord'
+        abstract: true
         views:
           'header':
             templateUrl: 'header-co.html'
           'sidemenu':
-            templateUrl: 'sidemenu.html'
+            templateUrl: 'sidemenu-co.html'
           'maincontent':
             templateUrl: 'maincontent.html'
 
-    $urlRouterProvider.otherwise '/home/login'
+      .state 'user.dashbord.quizee',
+        url: '/quizee'
+        templateUrl: 'quizee-content.html'
+      .state 'user.dashbord.cours',
+        url: '/cours'
+        templateUrl: 'cours.html'
+
+
+
+    $urlRouterProvider.otherwise '/home/dashbord/quizee'
     return
 
   QuizeeConfig
@@ -52,20 +73,3 @@
 
   return
 )()
-      # .state('co', {
-      #   url: '/co',
-      #   templateUrl: 'co.html',
-      #   abstract: true
-      # })
-      #
-      # .state('co.home', {
-      #   url: '/home',
-      #   views: {
-      #     'cote': {
-      #       template: '<h4>Side view co</h4>'
-      #     },
-      #     'milieu': {
-      #       template: '<h4>Middle view co</h4>'
-      #     }
-      #   }
-      # })

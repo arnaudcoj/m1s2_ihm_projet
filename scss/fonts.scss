@@ -1,12 +1,19 @@
 /* Font variables */
 $qz-font-path: "../fonts" !default;
 $qz-font-family: "Pokemon" !default;
+$qz-font-family-solid: "PokemonSolid" !default;
 /* Font faces */
 @font-face {
     font-family: $qz-font-family; /*a name to be used later*/
     src:
       url("#{$qz-font-path}/pokemon/PokemonHollow.ttf");
-      //url("#{$qz-font-path}/pokemon/PokemonSolid.ttf");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: $qz-font-family-solid; /*a name to be used later*/
+    src:
+      url("#{$qz-font-path}/pokemon/PokemonSolid.ttf");
     font-style: normal;
     font-weight: normal;
 }

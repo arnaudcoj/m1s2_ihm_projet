@@ -1,13 +1,14 @@
 (function() {
   "use strict";
   var SingoutCtrl, SingoutDrt;
-  SingoutCtrl = function($state, auth) {
+  SingoutCtrl = function($state, Auth) {
     this.signout = function() {
-      auth.signout();
-      $state.go("home.login");
+      Auth.signout();
+      console.log("signed out");
+      $state.go("home.dashbord.quizee");
     };
   };
-  SingoutCtrl.$inject = ['$state', 'auth'];
+  SingoutCtrl.$inject = ['$state', 'Auth'];
   SingoutDrt = function() {
     var directive, link;
     link = function(scope, element, attrs, ctrl) {
@@ -26,5 +27,5 @@
     };
     return directive;
   };
-  angular.module("quizee").directive("qzSignout", ['auth', SingoutDrt]);
+  angular.module("quizee.drt").directive("qzSignout", SingoutDrt);
 })();

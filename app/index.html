@@ -15,7 +15,7 @@
 
   </head>
 
-  <body ng-app="quizee">
+  <body ng-app="quizee" style="background-color: azure;">
     <div ui-view>
       <h1>Loading...</h1>
     </div>
@@ -26,11 +26,11 @@
       </header>
 
       <div class="row qz-content">
-        <section class="col" style="background-color: lightblue;margin-right:30px;" ui-view="sidemenu">
+        <section class="col s3 teal lighten-2 qz" ui-view="sidemenu">
 
         </section>
 
-        <section class="col qz-main-content" style="background-color: lightblue;" ui-view="maincontent">
+        <section class="col teal lighten-2 qz qz-main-content" ui-view="maincontent">
 
         </section>
       </div>
@@ -48,7 +48,7 @@
           </p>
           <div class="row">
             <div class="input-field row">
-              <input id="first_name" type="text" class="validate" ng-model="signFormCtrl.username">
+              <input id="first_name" autofocus="" type="text" class="validate" ng-model="signFormCtrl.username">
               <label for="first_name">Identifiant ou Email</label>
             </div>
             <div class="input-field row">
@@ -73,17 +73,16 @@
       </div>
     </script>
 
-    <script type="text/ng-template" id="account.html">
+    <script type="text/ng-template" id="user.html">
       <header ui-view="header">
 
       </header>
 
       <div class="row qz-content">
-        <section class="col" style="background-color: lightblue;margin-right:30px;" ui-view="sidemenu">
+        <section class="col s3 teal lighten-2 qz" ui-view="sidemenu">
 
         </section>
-
-        <section class="col qz-main-content" style="background-color: lightblue;" ui-view="maincontent">
+        <section class="col teal lighten-2 qz-main-content qz" ui-view="maincontent">
 
         </section>
       </div>
@@ -92,16 +91,9 @@
 
     <script type="text/ng-template" id="header-unco.html">
       <nav class="qz-main-header nav-wrapper">
-        <a href="#" class="brand-logo qz-main-title"><img class="qz-main-logo" src="img/quizee-logo.png"/><span>uizee</span></a>
+        <a href="#" class="brand-logo qz-main-title qz-font"><img class="qz-main-logo" src="img/quizee-logo.png"/><span>uizee</span></a>
         <ul class="right qz-top-nav-el">
-          <li class="input-field">
-            <input id="search" placeholder="Rechercher" type="search" required>
-            <label for="search"><i class="material-icons">search</i></label>
-            <i class="material-icons">close</i>
-          </li>
-          <li><a href="#">Sass</a></li>
-          <li><a href="#">Components</a></li>
-          <li><a href="#">Javascript</a></li>
+          <li><a ui-sref="^.dashbord.quizee">Accueil</a></li>
           <li><a class="waves-effect waves-light btn modal-trigger" href="#signin-modal">Connexion</a></li>
         </ul>
       </nav>
@@ -109,13 +101,9 @@
 
     <script type="text/ng-template" id="header-co.html">
       <nav class="qz-main-header nav-wrapper">
-        <a href="#" class="brand-logo qz-main-title"><img class="qz-main-logo" src="img/quizee-logo.png"/><span>uizee</span></a>
+        <a href="#" class="brand-logo qz-main-title qz-font"><img class="qz-main-logo" src="img/quizee-logo.png"/><span>uizee</span></a>
         <ul class="right qz-top-nav-el">
-          <li class="input-field">
-            <input id="search" placeholder="Rechercher" type="search" required>
-            <label for="search"><i class="material-icons">search</i></label>
-            <i class="material-icons">close</i>
-          </li>
+          <li><a ui-sref="^.dashbord.quizee">Accueil</a></li>
           <li><a class="waves-effect waves-light btn red" qz-signout>Déconnexion</a></li>
         </ul>
       </nav>
@@ -124,37 +112,81 @@
     <script type="text/ng-template" id="sidemenu.html">
       <div class="card">
         <div class="card-content">
-          <h4 class="card-titme">Recherche de cours</h4>
+          <h4 class="card-title">Recherche de cours</h4>
           <div class="input-field csearch">
             <input id="cours"type="search" required>
             <label for="cours"><i class="material-icons">search</i></label>
             <i class="material-icons">close</i>
           </div>
+          <div class="row">
+            <div class="right valign-wrapper">
+              <div class="col">
+                <a class="h-cursor" ui-sref=".cours">Tous</a>
+              </div>
+              <div class="col">
+                <button class="waves-effect waves-green btn">Valider</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </script>
 
+    <script type="text/ng-template" id="sidemenu-co.html">
+      <div class="card">
+        <div class="card-content">
+          <h4 class="card-title">Recherche de cours</h4>
+          <div class="input-field csearch">
+            <input id="cours"type="search" required>
+            <label for="cours"><i class="material-icons">search</i></label>
+            <i class="material-icons">close</i>
+          </div>
+          <div class="row">
+            <div class="right valign-wrapper">
+              <div class="col">
+                <a class="h-cursor" ui-sref=".cours">Tous</a>
+              </div>
+              <div class="col">
+                <button class="waves-effect waves-green btn">Valider</button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
       <div class="card">
         <div class="card-content">
-          <h4 class="card-titme">Mon profil</h4>
+          <h4 class="card-title">Mon profil <small><a class="right h-cursor">Voir profil</a></small></h4>
+          <div class="card-panel qz-blue">
+            <div class="row">
+              <div class="col m4 s12">
+                <img src="img/doge.png" alt="" class="avatar circle responsive-img">
+              </div>
+              <div class="col m8 s12 valign-wrapper">
+                <span class="black-text">
+                  This is a square image. Add the "circle" class to it to make it appear circular.
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
       <div class="card">
         <div class="card-content">
-          <h4 class="card-titme">Mes cours</h4>
-          <ul>
+          <h4 class="card-title">Mes cours <small><a class="right h-cursor" ui-sref=".cours">Tout voir</a></small></h4>
+          <ul class="list-2">
             <li>
-              CAR
+              <a class="h-cursor">CAR</a>
             </li>
             <li>
-              FAA
+              <a class="h-cursor">FAA</a>
             </li>
             <li>
-              HECI
+              <a class="h-cursor">HECI</a>
             </li>
             <li>
-              IHM
+              <a class="h-cursor">IHM</a>
             </li>
           </ul>
         </div>
@@ -162,36 +194,78 @@
     </script>
 
     <script type="text/ng-template" id="maincontent.html">
-      <h1>Section</h1>
-      <div class="container qz-container">
-        <div class="card qz-quiz-basic">
+      <div ui-view="">Loading...</div>
+    </script>
+
+    <script type="text/ng-template" id="quizee-content.html">
+      <div class="container qz-container" qz-all-quiz>
+        <h1 class="center-align">Tous les Quiz</h1>
+        <div class="card qz-quiz-basic" ng-class="{success: quiz.status == 'ok'}" ng-repeat="quiz in quizCtrl.all">
           <div class="card blue-grey darken-1 qz-basic-question">
             <div class="card-content white-text">
-              <h1 class="center-align card-title">Ceci est un Quiz Basique</h1>
+              <span>Cf. <a class="h-cursor" ui-sref="^.cours">FAA</a></span>
+              <h1 class="center-align card-title">{{ quiz.question }}</h1>
             </div>
           </div>
           <div class="row card-content qz-aswr-choices">
-            <div class="col s6 offset-s3">
+            <div class="col s12">
               <ul class="qz-aswr-choices center-align">
-                <li class="input-field">
-                  <input type="checkbox" id="check" class="filled-in" name="animal" value="Cat" />
-                  <label for="check">Allo</label>
-                </li>
-                <li class="input-field">
-                  <input type="checkbox" id="check2" class="filled-in" name="animal" value="Cat" />
-                  <label for="check2">Allo</label>
-                </li>
-                <li class="input-field">
-                  <input type="checkbox" id="check3" class="filled-in" name="animal" value="Cat" />
-                  <label for="check3">Allo</label>
-                </li>
-                <li class="input-field">
-                  <input type="checkbox" id="check4" class="filled-in" name="animal" value="Cat" />
-                  <label for="check4">Allo</label>
+                <li class="input-field left-align" ng-repeat="answer in quiz.choix">
+                  <input type="checkbox" id="{{quiz.id}}-check-{{$index}}" class="filled-in" ng-model="answer.checked" ng-change="quizCtrl.selectAnswer(quiz,$index,answer.checked)" />
+                  <label for="{{quiz.id}}-check-{{$index}}" ng-class="{'danger-txt':quizCtrl.answerOK(quiz,$index)}">{{ answer.txt }}</label>
                 </li>
               </ul>
             </div>
           </div>
+          <div class="card-action right-align" ng-class="{danger: quiz.status == 'ko'}" >
+            <span class="qz-alert-danger left" ng-if="quiz.status == 'ko'">
+              <h4 style="display: inline;">FAUX!</h4>
+            </span>
+            <span class="left" ng-if="quiz.status == 'ok'">
+              <h4 style="display: inline;">CORRECT!</h4>
+            </span>
+            <a class="btn" ng-click="quizCtrl.validate(quiz)">Valider</a>
+          </div>
+        </div>
+      </div>
+    </script>
+
+    <script type="text/ng-template" id="cours.html">
+      <div class="qz-container" qz-all-cours="">
+        <h1 class="center-align">Tous les cours</h1>
+        <div class="row">
+            <div class="card white qz-cours">
+              <div class="card-content">
+                <h2 class="card-title">FAA</h2>
+              </div>
+              <div class="card-action">
+                <a>Un lien</a>
+              </div>
+            </div>
+            <div class="card white qz-cours">
+              <div class="card-content">
+                <h2 class="card-title">FAA</h2>
+              </div>
+              <div class="card-action">
+                <a>Un lien</a>
+              </div>
+            </div>
+            <div class="card white qz-cours">
+              <div class="card-content">
+                <h2 class="card-title">FAA</h2>
+              </div>
+              <div class="card-action">
+                <a>Un lien</a>
+              </div>
+            </div>
+            <div class="card white qz-cours">
+              <div class="card-content">
+                <h2 class="card-title">FAA</h2>
+              </div>
+              <div class="card-action">
+                <a>Un lien</a>
+              </div>
+            </div>
         </div>
       </div>
     </script>
