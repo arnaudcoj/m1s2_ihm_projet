@@ -5,7 +5,6 @@
     var information;
     information = function() {
       if (Auth.islogged()) {
-        console.log(Auth.current().id);
         return Users.user_info(Auth.current().id);
       }
     };
@@ -18,41 +17,35 @@
       },
       nbCours: function() {
         if (Auth.islogged()) {
-          return information().cours.length;
+          return information().cours;
         }
       },
       qzOK: function() {
-        var qz;
+        var i, len, qz, ref, results;
         if (Auth.islogged()) {
-          return ((function() {
-            var i, len, ref, results;
-            ref = information().quizee;
-            results = [];
-            for (i = 0, len = ref.length; i < len; i++) {
-              qz = ref[i];
-              if (qz.status === 'ok') {
-                results.push(qz);
-              }
+          ref = information().quizee;
+          results = [];
+          for (i = 0, len = ref.length; i < len; i++) {
+            qz = ref[i];
+            if (qz.status === 'ok') {
+              results.push(qz);
             }
-            return results;
-          })()).length;
+          }
+          return results;
         }
       },
       qzKO: function() {
-        var qz;
+        var i, len, qz, ref, results;
         if (Auth.islogged()) {
-          return ((function() {
-            var i, len, ref, results;
-            ref = information().quizee;
-            results = [];
-            for (i = 0, len = ref.length; i < len; i++) {
-              qz = ref[i];
-              if (qz.status === 'ko') {
-                results.push(qz);
-              }
+          ref = information().quizee;
+          results = [];
+          for (i = 0, len = ref.length; i < len; i++) {
+            qz = ref[i];
+            if (qz.status === 'ko') {
+              results.push(qz);
             }
-            return results;
-          })()).length;
+          }
+          return results;
         }
       }
     };

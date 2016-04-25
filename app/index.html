@@ -102,7 +102,8 @@
       <nav class="qz-main-header nav-wrapper">
         <a href="#" class="brand-logo qz-main-title qz-font"><img class="qz-main-logo" src="img/quizee-logo.png"/><span>uizee</span></a>
         <ul class="right qz-top-nav-el">
-          <li><a ui-sref="^.dashbord.quizee">Accueil</a></li>
+          <li class="qz-blue-darker"><a ui-sref=".quizee">Accueil</a></li>
+          <li><a ui-sref=".cours">Tous les Cours</a></li>
           <li><a class="waves-effect waves-light btn modal-trigger" href="#signin-modal">Connexion</a></li>
         </ul>
       </nav>
@@ -112,7 +113,8 @@
       <nav class="qz-main-header nav-wrapper">
         <a href="#" class="brand-logo qz-main-title qz-font"><img class="qz-main-logo" src="img/quizee-logo.png"/><span>uizee</span></a>
         <ul class="right qz-top-nav-el">
-          <li><a ui-sref="^.dashbord.quizee">Accueil</a></li>
+          <li class="qz-blue-darker"><a ui-sref=".quizee">Accueil</a></li>
+          <li><a ui-sref=".cours">Tous les cours</a></li>
           <li><a class="waves-effect waves-light btn orange" qz-signout>Déconnexion</a></li>
         </ul>
       </nav>
@@ -133,7 +135,7 @@
                 <a class="h-cursor" ui-sref=".cours">Tous</a>
               </div>
               <div class="col">
-                <button class="waves-effect waves-green btn">Valider</button>
+                <a class="waves-effect waves-green btn" ui-sref=".cours">Valider</a>
               </div>
             </div>
           </div>
@@ -156,7 +158,7 @@
                 <a class="h-cursor" ui-sref=".cours">Tous</a>
               </div>
               <div class="col">
-                <button class="waves-effect waves-green btn">Valider</button>
+                <a class="waves-effect waves-green btn" ui-sref=".cours">Valider</a>
               </div>
             </div>
           </div>
@@ -174,28 +176,28 @@
               <div class="col m8 s12">
                 <ul class="qz-list-info">
                   <li>
-                    <span><span class="qz-badge green">{{profilCtrl.qzOK()}} / {{profilCtrl.nbQuiz}}</span> Quiz effectués !</span>
+                    <span><span class="qz-badge green">{{profilCtrl.qzOK().length}} / {{profilCtrl.nbQuiz}}</span> Quiz réussis !</span>
                     <div class="progress">
-                        <div class="determinate green" ng-style="profilCtrl.style"></div>
+                        <div class="determinate green" ng-style="{width: (profilCtrl.qzOK().length / profilCtrl.nbQuiz) * 100 + '%'}"></div>
                     </div>
                   </li>
                   <li>
                     <div class="chip center-align">
-                      <span class="qz-badge blue">{{profilCtrl.qzOK()}}</span>
+                      <span class="qz-badge blue">{{profilCtrl.qzOK().length}}</span>
                       Quizee ok
                       <i class="material-icons success-txt">done</i>
                     </div>
                   </li>
                   <li>
                     <div class="chip center-align">
-                      <span class="qz-badge red">{{profilCtrl.qzKO()}}</span>
+                      <span class="qz-badge red">{{profilCtrl.qzKO().length}}</span>
                       Quizee ko
                       <i class="material-icons danger-txt">error</i>
                     </div>
                   </li>
                   <li>
                     <div class="chip center-align">
-                      <span class="qz-badge orange">{{profilCtrl.nbCours()}}</span>
+                      <span class="qz-badge orange">{{profilCtrl.nbCours().length}}</span>
                       Nb cours
                       <i class="material-icons info-txt">list</i>
                     </div>
@@ -210,21 +212,12 @@
         </div>
       </div>
 
-      <div class="card">
+      <div class="card" qz-all-cours>
         <div class="card-content">
           <h4 class="card-title">Mes cours <small><a class="right h-cursor" ui-sref=".cours">Tout voir</a></small></h4>
           <ul class="list-2">
-            <li>
-              <a class="h-cursor">CAR</a>
-            </li>
-            <li>
-              <a class="h-cursor">FAA</a>
-            </li>
-            <li>
-              <a class="h-cursor">HECI</a>
-            </li>
-            <li>
-              <a class="h-cursor">IHM</a>
+            <li ng-repeat="cours in coursCtrl.mescours()">
+              <a class="h-cursor">{{cours}}</a>
             </li>
           </ul>
         </div>
@@ -276,41 +269,27 @@
     </script>
 
     <script type="text/ng-template" id="cours.html">
-      <div class="qz-container" qz-all-cours="">
-        <h1 class="center-align">Tous les cours</h1>
+      <div class="container qz-container" qz-all-cours>
+        <h1 class="left-align white-text">Tous les <span class="qz-font">cours</span></h1>
         <div class="row">
-            <div class="card white qz-cours">
-              <div class="card-content">
-                <h2 class="card-title">FAA</h2>
-              </div>
-              <div class="card-action">
-                <a>S'inscrire</a>
-              </div>
+          <div class="card white qz-cours" ng-repeat="cours in coursCtrl.all">
+            <div class="card-content">
+              <h2 class="card-title valign-wrapper">
+                {{cours.name}}
+                <div class="chip">
+                  <span class="qz-badge blue">{{coursCtrl.nbInscrits(cours.name)}}</span>
+                  inscrits
+                </div>
+              </h2>
+              <p>
+                <a>Page du cours</a>
+              </p>
             </div>
-            <div class="card white qz-cours">
-              <div class="card-content">
-                <h2 class="card-title">FAA</h2>
-              </div>
-              <div class="card-action">
-                <a>S'inscrire</a>
-              </div>
+            <div class="card-action" ng-if="coursCtrl.logged()">
+              <a class="info-txt h-cursor" ng-if="!coursCtrl.inscrit(cours.name)" ng-click="coursCtrl.subscribe(cours.name)">S'inscrire</a>
+              <a class="danger-txt h-cursor" ng-if="coursCtrl.inscrit(cours.name)" ng-click="coursCtrl.unsubscribe(cours.name)">Se désinscrire</a>
             </div>
-            <div class="card white qz-cours">
-              <div class="card-content">
-                <h2 class="card-title">FAA</h2>
-              </div>
-              <div class="card-action">
-                <a>S'inscrire</a>
-              </div>
-            </div>
-            <div class="card white qz-cours">
-              <div class="card-content">
-                <h2 class="card-title">FAA</h2>
-              </div>
-              <div class="card-action">
-                <a>S'inscrire</a>
-              </div>
-            </div>
+          </div>
         </div>
       </div>
     </script>

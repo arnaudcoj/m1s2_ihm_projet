@@ -1,10 +1,11 @@
 (->
   "use strict"
 
-  AllCoursCtrl = ($state,Cours, Auth,Users) ->
+  AllCoursCtrl = ($state,Cours, Auth,Users,Info) ->
     @all = Cours.all()
-
+    @logged = Auth.islogged
     @subscribe = (cours) ->
+      console.log "subscribe",cours
       if Auth.islogged()
         Users.subscribe(Auth.current().id,cours)
       else
@@ -12,16 +13,20 @@
       return
 
     @unsubscribe = (cours) ->
-        Users.unsubscribe(Auth.current().id,cours) if Auth.islogged()
+      console.log "unsubscribe",cours
+      Users.unsubscribe(Auth.current().id,cours) if Auth.islogged()
 
     @inscrit = (cours) ->
-      Users.inscrit("honore",cours)
-      # if Auth.islogged() then Users.inscrit(Auth.current(),cours) else no
+      if @logged() then Users.inscrit(Auth.current().id,cours) else false
+
+    @nbInscrits = (cours)-> Cours.nbInscrits cours
+
+    @mescours = -> Info.nbCours()
 
     return
 
 
-  AllCoursCtrl.$inject = ['$state','Cours','Auth','Users']
+  AllCoursCtrl.$inject = ['$state','Cours','Auth','Users','Info']
 
   AllCoursDrt = () ->
     link = (scope, element, attrs, ctrl) ->
@@ -30,6 +35,7 @@
 
     directive =
       restrict: 'A'
+      scope:true
       link: link
       controller: AllCoursCtrl
       controllerAs: 'coursCtrl'

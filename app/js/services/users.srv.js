@@ -10,13 +10,35 @@ var indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i 
         "honore": {
           mdp: "honore",
           cours: ["FAA", "IHM", "SVL", "CAR"],
-          quizee: []
+          quizee: [
+            {
+              id: 3,
+              status: 'ok',
+              errors: [],
+              aswrIdx: [2],
+              selected: []
+            }
+          ]
         }
       }, {
         "arnaud": {
           mdp: "arnaud",
           cours: ["FAA", "IHM", "Compil", "HECI", "M3DS"],
-          quizee: []
+          quizee: [
+            {
+              id: 2,
+              status: 'ok',
+              errors: [],
+              aswrIdx: [2],
+              selected: []
+            }, {
+              id: 3,
+              status: 'ok',
+              errors: [],
+              aswrIdx: [2],
+              selected: []
+            }
+          ]
         }
       }, {
         "fabien": {
@@ -28,12 +50,26 @@ var indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i 
         "pierre-claver": {
           mdp: "pierre-claver",
           cours: ["FAA", "IHM", "CANARD", "TI"],
-          quizee: []
+          quizee: [
+            {
+              id: 2,
+              status: 'ok',
+              errors: [],
+              aswrIdx: [2],
+              selected: []
+            }, {
+              id: 1,
+              status: 'ok',
+              errors: [],
+              aswrIdx: [2],
+              selected: []
+            }
+          ]
         }
       }, {
         "salim": {
           mdp: "salim",
-          cours: ["FAA", "IHM", "TI", "CAR"],
+          cours: ["IHM", "TI", "CAR"],
           quizee: []
         }
       }
@@ -43,12 +79,9 @@ var indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i 
       all: function() {
         return users;
       },
-      cours: function(user) {
-        return user.cours;
-      },
       user_info: function(user) {
-        var q, res;
-        res = ((function() {
+        var q;
+        return ((function() {
           var i, len, results;
           results = [];
           for (i = 0, len = users.length; i < len; i++) {
@@ -59,12 +92,19 @@ var indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i 
           }
           return results;
         })())[0][user];
-        console.log("user_info", res);
-        return res;
       },
       subscribe: function(user, cours) {
-        var ref;
-        return (ref = users[user]) != null ? ref.cours.push(cours) : void 0;
+        var i, len, results, u;
+        results = [];
+        for (i = 0, len = users.length; i < len; i++) {
+          u = users[i];
+          if (user in u) {
+            results.push(u[user].cours.push(cours));
+          } else {
+            results.push(void 0);
+          }
+        }
+        return results;
       },
       inscrit: function(user, cours) {
         var i, len, u;
@@ -79,21 +119,33 @@ var indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i 
         return false;
       },
       unsubscribe: function(user, cours) {
-        var elemIdx, ref, ref1;
-        elemIdx = (ref = users[user]) != null ? ref.cours.indexOf(cours) : void 0;
-        if (elemIdx >= 0) {
-          return (ref1 = users[user]) != null ? ref1.splice(elemIdx, 1) : void 0;
+        var elemIdx, i, len, results, u;
+        results = [];
+        for (i = 0, len = users.length; i < len; i++) {
+          u = users[i];
+          if (user in u) {
+            elemIdx = u[user].cours.indexOf(cours);
+            if (elemIdx > -1) {
+              results.push(u[user].cours.splice(elemIdx, 1));
+            } else {
+              results.push(void 0);
+            }
+          } else {
+            results.push(void 0);
+          }
         }
+        return results;
       },
       save_quizee: function(quiz, user) {
-        var i, len, q;
+        var i, len, q, results;
+        results = [];
         for (i = 0, len = users.length; i < len; i++) {
           q = users[i];
           if (user in q) {
-            q[user].quizee.push(quiz);
+            results.push(q[user].quizee.push(quiz));
           }
         }
-        return console.log("save", users);
+        return results;
       }
     };
   };

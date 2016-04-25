@@ -8,15 +8,6 @@
       this.nbCours = Info.nbCours;
       this.qzOK = Info.qzOK;
       this.qzKO = Info.qzKO;
-      this.taux = function() {
-        var error;
-        try {
-          return (Math.floor(this.qzOK() / this.nbQuiz())) * 100;
-        } catch (error) {
-          return 0;
-        }
-      };
-      this.style = {};
     }
     console.log("scope profil", this);
   };

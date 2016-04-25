@@ -8,12 +8,6 @@
       @nbCours = Info.nbCours
       @qzOK = Info.qzOK
       @qzKO = Info.qzKO
-      @taux = ->
-        try
-          (@qzOK() // @nbQuiz()) * 100
-        catch
-          0
-      @style = {}
 
     console.log "scope profil",this
 

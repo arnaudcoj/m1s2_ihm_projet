@@ -7,13 +7,36 @@
         "honore":
           mdp: "honore"
           cours: ["FAA", "IHM", "SVL", "CAR"]
-          quizee: []
+          quizee: [
+            {
+              id: 3
+              status: 'ok'
+              errors: []
+              aswrIdx:[2]
+              selected: []
+            }
+          ]
       },
       {
         "arnaud":
           mdp: "arnaud"
           cours: ["FAA","IHM", "Compil", "HECI", "M3DS"]
-          quizee: []
+          quizee: [
+            {
+              id: 2
+              status: 'ok'
+              errors: []
+              aswrIdx:[2]
+              selected: []
+            }
+            {
+              id: 3
+              status: 'ok'
+              errors: []
+              aswrIdx:[2]
+              selected: []
+            }
+          ]
       },
       {
         "fabien":
@@ -25,25 +48,41 @@
         "pierre-claver":
           mdp: "pierre-claver"
           cours: ["FAA","IHM","CANARD", "TI"]
-          quizee: []
+          quizee: [
+            {
+              id: 2
+              status: 'ok'
+              errors: []
+              aswrIdx:[2]
+              selected: []
+            }
+            {
+              id: 1
+              status: 'ok'
+              errors: []
+              aswrIdx:[2]
+              selected: []
+            }
+          ]
       },
       {
         "salim":
           mdp: "salim"
-          cours: ["FAA","IHM", "TI", "CAR"]
+          cours: ["IHM", "TI", "CAR"]
           quizee: []
       }
     ]
     current = null
 
     return {
-      all: () -> users
-      cours: (user) -> user.cours
+      all: -> users
       user_info: (user)->
-        res = (q for q in users when user of q)[0][user]
-        console.log "user_info",res
-        res
-      subscribe: (user,cours) -> users[user]?.cours.push cours
+        (q for q in users when user of q)[0][user]
+        # console.log "user_info",res
+      subscribe: (user,cours) ->
+        for u in users
+          if (user of u)
+            u[user].cours.push cours
       inscrit: (user,cours) ->
         # console.log "ask",user, cours
         for u in users
@@ -53,11 +92,13 @@
             if cours in u[user].cours then return yes
         return no
       unsubscribe: (user,cours) ->
-        elemIdx = users[user]?.cours.indexOf cours
-        users[user]?.splice elemIdx, 1 if elemIdx >= 0
+        for u in users
+          if (user of u)
+            elemIdx = u[user].cours.indexOf cours
+            u[user].cours.splice elemIdx, 1 if elemIdx > -1
       save_quizee: (quiz,user) ->
         q[user].quizee.push quiz for q in users when user of q
-        console.log "save",users
+        # console.log "save",users
     }
 
   angular
