@@ -9,27 +9,32 @@ var indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i 
       {
         "honore": {
           mdp: "honore",
-          cours: ["FAA", "IHM", "SVL", "CAR"]
+          cours: ["FAA", "IHM", "SVL", "CAR"],
+          quizee: []
         }
       }, {
         "arnaud": {
           mdp: "arnaud",
-          cours: ["FAA", "IHM", "Compil", "HECI", "M3DS"]
+          cours: ["FAA", "IHM", "Compil", "HECI", "M3DS"],
+          quizee: []
         }
       }, {
         "fabien": {
           mdp: "fabien",
-          cours: ["FAA", "IHM"]
+          cours: ["FAA", "IHM"],
+          quizee: []
         }
       }, {
         "pierre-claver": {
           mdp: "pierre-claver",
-          cours: ["FAA", "IHM", "CANARD", "TI"]
+          cours: ["FAA", "IHM", "CANARD", "TI"],
+          quizee: []
         }
       }, {
         "salim": {
           mdp: "salim",
-          cours: ["FAA", "IHM", "TI", "CAR"]
+          cours: ["FAA", "IHM", "TI", "CAR"],
+          quizee: []
         }
       }
     ];
@@ -41,18 +46,31 @@ var indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i 
       cours: function(user) {
         return user.cours;
       },
+      user_info: function(user) {
+        var q, res;
+        res = ((function() {
+          var i, len, results;
+          results = [];
+          for (i = 0, len = users.length; i < len; i++) {
+            q = users[i];
+            if (user in q) {
+              results.push(q);
+            }
+          }
+          return results;
+        })())[0][user];
+        console.log("user_info", res);
+        return res;
+      },
       subscribe: function(user, cours) {
         var ref;
         return (ref = users[user]) != null ? ref.cours.push(cours) : void 0;
       },
       inscrit: function(user, cours) {
         var i, len, u;
-        console.log("ask", user, cours);
         for (i = 0, len = users.length; i < len; i++) {
           u = users[i];
-          console.log("user", u, user, user in u);
           if (user in u) {
-            console.log("found user");
             if (indexOf.call(u[user].cours, cours) >= 0) {
               return true;
             }
@@ -66,6 +84,16 @@ var indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i 
         if (elemIdx >= 0) {
           return (ref1 = users[user]) != null ? ref1.splice(elemIdx, 1) : void 0;
         }
+      },
+      save_quizee: function(quiz, user) {
+        var i, len, q;
+        for (i = 0, len = users.length; i < len; i++) {
+          q = users[i];
+          if (user in q) {
+            q[user].quizee.push(quiz);
+          }
+        }
+        return console.log("save", users);
       }
     };
   };

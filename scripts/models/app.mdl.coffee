@@ -36,7 +36,7 @@
       # Logged states
       .state 'user',
         url: '/user'
-        templateUrl: 'user.html'
+        templateUrl: 'home-co.html'
         abstract: true
       .state 'user.dashbord',
         url: '/dashbord'
@@ -48,6 +48,8 @@
             templateUrl: 'sidemenu-co.html'
           'maincontent':
             templateUrl: 'maincontent.html'
+          'infouser':
+            templateUrl: 'info-user.html'
 
       .state 'user.dashbord.quizee',
         url: '/quizee'

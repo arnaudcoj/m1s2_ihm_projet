@@ -1,51 +1,8 @@
 (->
   "use strict"
 
-  AllQuizCtrl = ($state, Auth) ->
-    @all = [
-      {
-        id: 1
-        status: 'none'
-        errors: []
-        question: "Combien font 1 + 1 ?"
-        choix: [
-          {txt:3, checked:false}
-          {txt:2, checked:false}
-          {txt:8, checked:false}
-          {txt:"Je ne sais pas.", checked:false}
-        ]
-        aswrIdx:[1]
-        selected: []
-      }
-      {
-        id: 2
-        status: 'none'
-        errors: []
-        question: "Combien font 1 + 2 ?"
-        choix: [
-          {txt:3, checked:false}
-          {txt:2, checked:false}
-          {txt:8, checked:false}
-          {txt:"Je ne sais pas.", checked:false}
-        ]
-        aswrIdx:[0]
-        selected: []
-      }
-      {
-        id: 3
-        status: 'none'
-        errors: []
-        question: "Combien font 4 + 4 ?"
-        choix: [
-          {txt:3, checked:false}
-          {txt:2, checked:false}
-          {txt:8, checked:false}
-          {txt:"Je ne sais pas.", checked:false}
-        ]
-        aswrIdx:[2]
-        selected: []
-      }
-    ]
+  AllQuizCtrl = ($state, Auth, Quizee) ->
+    @all = Quizee.all()
 
     @selectAnswer = (quiz,idx,checked) ->
       if checked
@@ -67,11 +24,12 @@
       for v in quiz.selected
         quiz.errors.push v if v not in quiz.aswrIdx
       console.log "quiz id", quiz,@all
+      Quizee.save_to_user(quiz,Auth.current()?.id) # TODO
       return
 
     return
 
-  AllQuizCtrl.$inject = ['$state','Auth']
+  AllQuizCtrl.$inject = ['$state','Auth', 'Quizee']
 
   AllQuizDrt = () ->
     link = (scope, element, attrs, ctrl) ->

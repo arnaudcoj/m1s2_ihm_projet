@@ -63,13 +63,15 @@ section.qz {
   margin-bottom: 25px;
 }
 .qz-content {
-  margin-top: 40px;
-  margin-left: 2%;
-  margin-right: 0;
+  padding: 1rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  .view-infouser {
+    padding: 0
+  }
 }
 .qz-main-content {
   width: 70%;
-  margin-left: 2%;
 }
 .csearch {
   margin-top: 30px;
@@ -92,5 +94,46 @@ img.avatar.circle {
   margin-left: 2%;
   margin-right: 2%;
 }
+.qz-quiz-basic.success .card-action h4 {
+  color: $success-txt;
+}
 .list-2 { @include make-columns(2); }
 .list-3 { @include make-columns(3); }
+.qz-usercard {
+  padding: 18px;
+  min-height: 90px;
+  img {
+    position: absolute;
+    right: 20%;
+    top: 15%;
+  }
+}
+.qz-badge {
+  display: inline-block;
+  min-width: 10px;
+  padding: 3px 7px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  background-color: #777;
+  border-radius: 10px;
+  &.success {
+    @extend .success;
+  }
+  &.info {
+    @extend .info;
+  }
+  &.danger {
+    @extend .danger;
+  }
+}
+.qz-list-info li {
+  .chip {
+    width: 100%;
+    margin: 4px 0 4px 0;
+  }
+}

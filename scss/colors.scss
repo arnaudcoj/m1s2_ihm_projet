@@ -12,8 +12,17 @@ $danger-txt: #a94442;
 $danger-bg: #f2dede;
 $danger-border: #ebccd1;
 
+$dark: "darker";
+$light: "lighter";
+
 .qz-blue {
   background-color: $qz-header-blue;
+  &-#{$dark} {
+    background-color: darken($qz-header-blue,10%);
+  }
+  &-#{$light} {
+    background-color: lighten($qz-header-blue,15%);
+  }
 }
 .qz-blue-text {
   color: $qz-header-blue;

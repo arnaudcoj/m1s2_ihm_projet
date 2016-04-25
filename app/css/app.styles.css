@@ -16,6 +16,10 @@
 
 .qz-blue {
   background-color: #6BC3DA; }
+  .qz-blue-darker {
+    background-color: #42b2d0; }
+  .qz-blue-lighter {
+    background-color: #a8dce9; }
 
 .qz-blue-text {
   color: #6BC3DA; }
@@ -41,13 +45,13 @@
   background-color: #d9edf7;
   border-color: #bce8f1; }
 
-.success {
+.success, .qz-badge.success {
   background-color: #dff0d8 !important; }
 
-.danger {
+.danger, .qz-badge.danger {
   background-color: #f2dede !important; }
 
-.info {
+.info, .qz-badge.info {
   background-color: #d9edf7 !important; }
 
 .success-txt {
@@ -110,13 +114,14 @@ section.qz {
   margin-bottom: 25px; }
 
 .qz-content {
-  margin-top: 40px;
-  margin-left: 2%;
-  margin-right: 0; }
+  padding: 1rem;
+  margin-left: 2rem;
+  margin-right: 2rem; }
+  .qz-content .view-infouser {
+    padding: 0; }
 
 .qz-main-content {
-  width: 70%;
-  margin-left: 2%; }
+  width: 70%; }
 
 .csearch {
   margin-top: 30px; }
@@ -139,6 +144,9 @@ img.avatar.circle {
   margin-left: 2%;
   margin-right: 2%; }
 
+.qz-quiz-basic.success .card-action h4 {
+  color: #3c763d; }
+
 .list-2 {
   -webkit-column-count: 2;
   /* Chrome, Safari, Opera */
@@ -152,3 +160,29 @@ img.avatar.circle {
   -moz-column-count: 3;
   /* Firefox */
   column-count: 3; }
+
+.qz-usercard {
+  padding: 18px;
+  min-height: 90px; }
+  .qz-usercard img {
+    position: absolute;
+    right: 20%;
+    top: 15%; }
+
+.qz-badge {
+  display: inline-block;
+  min-width: 10px;
+  padding: 3px 7px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  background-color: #777;
+  border-radius: 10px; }
+
+.qz-list-info li .chip {
+  width: 100%;
+  margin: 4px 0 4px 0; }

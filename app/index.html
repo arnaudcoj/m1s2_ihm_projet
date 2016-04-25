@@ -19,6 +19,7 @@
     <div ui-view>
       <h1>Loading...</h1>
     </div>
+    <qz-signin-form></qz-signin-form>
 
     <script type="text/ng-template" id="home.html">
       <header ui-view="header">
@@ -26,22 +27,22 @@
       </header>
 
       <div class="row qz-content">
-        <section class="col s3 teal lighten-2 qz" ui-view="sidemenu">
+        <div class="row">
+          <section class="col s3 teal lighten-2 qz" ui-view="sidemenu">
 
-        </section>
+          </section>
+          <section class="col right teal lighten-2 qz-main-content qz" ui-view="maincontent">
 
-        <section class="col teal lighten-2 qz qz-main-content" ui-view="maincontent">
-
-        </section>
+          </section>
+        </div>
       </div>
-      <qz-signin-form></qz-signin-form>
     </script>
 
     <script type="text/ng-template" id="signin-modal.html">
       <!-- Modal Structure -->
       <div id="signin-modal" class="modal qz-modal-co">
         <div class="modal-content">
-          <h4 class="qz-h">Connexion à Quizee</h4>
+          <h4 class="qz-h">Connexion à <span class="qz-font">Quizee</span></h4>
           <p>Connectez vous pour voir votre avancement, défier des amis ou vous exercez en faisant tous les Quiz que vous pouvez.</p>
           <p>
             Vous pouvez aussi faire les quiz sans compte et en créer un plus tard pour sauver votre avancement.
@@ -73,18 +74,26 @@
       </div>
     </script>
 
-    <script type="text/ng-template" id="user.html">
+    <script type="text/ng-template" id="home-co.html">
       <header ui-view="header">
 
       </header>
 
+
       <div class="row qz-content">
-        <section class="col s3 teal lighten-2 qz" ui-view="sidemenu">
+        <div class="row">
+          <div class="col m4 right view-infouser" ui-view="infouser">
 
-        </section>
-        <section class="col teal lighten-2 qz-main-content qz" ui-view="maincontent">
+          </div>
+        </div>
+        <div class="row">
+          <section class="col s3 teal lighten-2 qz" ui-view="sidemenu">
 
-        </section>
+          </section>
+          <section class="col right teal lighten-2 qz-main-content qz" ui-view="maincontent">
+
+          </section>
+        </div>
       </div>
       <qz-signin-form></qz-signin-form>
     </script>
@@ -104,7 +113,7 @@
         <a href="#" class="brand-logo qz-main-title qz-font"><img class="qz-main-logo" src="img/quizee-logo.png"/><span>uizee</span></a>
         <ul class="right qz-top-nav-el">
           <li><a ui-sref="^.dashbord.quizee">Accueil</a></li>
-          <li><a class="waves-effect waves-light btn red" qz-signout>Déconnexion</a></li>
+          <li><a class="waves-effect waves-light btn orange" qz-signout>Déconnexion</a></li>
         </ul>
       </nav>
     </script>
@@ -154,18 +163,47 @@
         </div>
       </div>
 
-      <div class="card">
+      <div class="card" qz-profil>
         <div class="card-content">
           <h4 class="card-title">Mon profil <small><a class="right h-cursor">Voir profil</a></small></h4>
-          <div class="card-panel qz-blue">
-            <div class="row">
+          <div class="card-panel qz-blue-lighter">
+            <div class="row valign-wrapper">
               <div class="col m4 s12">
                 <img src="img/doge.png" alt="" class="avatar circle responsive-img">
               </div>
-              <div class="col m8 s12 valign-wrapper">
-                <span class="black-text">
-                  This is a square image. Add the "circle" class to it to make it appear circular.
-                </span>
+              <div class="col m8 s12">
+                <ul class="qz-list-info">
+                  <li>
+                    <span><span class="qz-badge green">{{profilCtrl.qzOK()}} / {{profilCtrl.nbQuiz}}</span> Quiz effectués !</span>
+                    <div class="progress">
+                        <div class="determinate green" ng-style="profilCtrl.style"></div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="chip center-align">
+                      <span class="qz-badge blue">{{profilCtrl.qzOK()}}</span>
+                      Quizee ok
+                      <i class="material-icons success-txt">done</i>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="chip center-align">
+                      <span class="qz-badge red">{{profilCtrl.qzKO()}}</span>
+                      Quizee ko
+                      <i class="material-icons danger-txt">error</i>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="chip center-align">
+                      <span class="qz-badge orange">{{profilCtrl.nbCours()}}</span>
+                      Nb cours
+                      <i class="material-icons info-txt">list</i>
+                    </div>
+                  </li>
+                  <li class="center-align">
+                    <a class="h-cursor">Profil complet</a>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -197,9 +235,16 @@
       <div ui-view="">Loading...</div>
     </script>
 
+    <script type="text/ng-template" id="info-user.html">
+      <h3 class="qz-font-s qz-usercard card valign-wrapper qz-blue-darker" qz-profil>
+        <span class="white-text">Bonjour <span class="teal-text">{{profilCtrl.username}}</span></span>
+        <img src="img/doge.png" class="avatar circle responsive-img"/>
+      </h3>
+    </script>
+
     <script type="text/ng-template" id="quizee-content.html">
       <div class="container qz-container" qz-all-quiz>
-        <h1 class="center-align">Tous les Quiz</h1>
+        <h1 class="left-align white-text">Tous les <span class="qz-font">Quizee</span></h1>
         <div class="card qz-quiz-basic" ng-class="{success: quiz.status == 'ok'}" ng-repeat="quiz in quizCtrl.all">
           <div class="card blue-grey darken-1 qz-basic-question">
             <div class="card-content white-text">

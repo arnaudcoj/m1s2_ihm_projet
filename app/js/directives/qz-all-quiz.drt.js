@@ -3,76 +3,8 @@ var indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i 
 (function() {
   "use strict";
   var AllQuizCtrl, AllQuizDrt;
-  AllQuizCtrl = function($state, Auth) {
-    this.all = [
-      {
-        id: 1,
-        status: 'none',
-        errors: [],
-        question: "Combien font 1 + 1 ?",
-        choix: [
-          {
-            txt: 3,
-            checked: false
-          }, {
-            txt: 2,
-            checked: false
-          }, {
-            txt: 8,
-            checked: false
-          }, {
-            txt: "Je ne sais pas.",
-            checked: false
-          }
-        ],
-        aswrIdx: [1],
-        selected: []
-      }, {
-        id: 2,
-        status: 'none',
-        errors: [],
-        question: "Combien font 1 + 2 ?",
-        choix: [
-          {
-            txt: 3,
-            checked: false
-          }, {
-            txt: 2,
-            checked: false
-          }, {
-            txt: 8,
-            checked: false
-          }, {
-            txt: "Je ne sais pas.",
-            checked: false
-          }
-        ],
-        aswrIdx: [0],
-        selected: []
-      }, {
-        id: 3,
-        status: 'none',
-        errors: [],
-        question: "Combien font 4 + 4 ?",
-        choix: [
-          {
-            txt: 3,
-            checked: false
-          }, {
-            txt: 2,
-            checked: false
-          }, {
-            txt: 8,
-            checked: false
-          }, {
-            txt: "Je ne sais pas.",
-            checked: false
-          }
-        ],
-        aswrIdx: [2],
-        selected: []
-      }
-    ];
+  AllQuizCtrl = function($state, Auth, Quizee) {
+    this.all = Quizee.all();
     this.selectAnswer = function(quiz, idx, checked) {
       if (checked) {
         quiz.selected.push(idx);
@@ -85,7 +17,7 @@ var indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i 
       return quiz.errors.indexOf(index) > -1;
     };
     this.validate = function(quiz) {
-      var i, len, ref, v;
+      var i, len, ref, ref1, v;
       quiz.errors = [];
       if (quiz.selected.every((function(_this) {
         return function(current) {
@@ -108,9 +40,10 @@ var indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i 
         }
       }
       console.log("quiz id", quiz, this.all);
+      Quizee.save_to_user(quiz, (ref1 = Auth.current()) != null ? ref1.id : void 0);
     };
   };
-  AllQuizCtrl.$inject = ['$state', 'Auth'];
+  AllQuizCtrl.$inject = ['$state', 'Auth', 'Quizee'];
   AllQuizDrt = function() {
     var directive, link;
     link = function(scope, element, attrs, ctrl) {
