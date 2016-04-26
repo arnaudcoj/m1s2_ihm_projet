@@ -6,21 +6,22 @@
     all = [
       {
         id: 1,
+        related: "IHM",
         status: 'none',
         errors: [],
-        question: "Combien font 1 + 1 ?",
+        question: "Qui a inventé le code Rousseau de la route ?",
         choix: [
           {
-            txt: 3,
+            txt: "Jean-Jacques Rousseau",
             checked: false
           }, {
-            txt: 2,
+            txt: "Un pakistanais en slip.",
             checked: false
           }, {
-            txt: 8,
+            txt: "Louis Rousseau",
             checked: false
           }, {
-            txt: "Je ne sais pas.",
+            txt: "La réponse D.",
             checked: false
           }
         ],
@@ -28,12 +29,13 @@
         selected: []
       }, {
         id: 2,
+        related: "IHM",
         status: 'none',
         errors: [],
         question: "Combien font 1 + 2 ?",
         choix: [
           {
-            txt: 3,
+            txt: "3 (est-ce ta dernière bafouille ?)",
             checked: false
           }, {
             txt: 2,
@@ -50,21 +52,22 @@
         selected: []
       }, {
         id: 3,
+        related: "FAA",
         status: 'none',
         errors: [],
-        question: "Combien font 4 + 4 ?",
+        question: "Que signifie Hakuna Matata ?",
         choix: [
           {
-            txt: 3,
+            txt: "LOL",
             checked: false
           }, {
-            txt: 2,
+            txt: "YOLO, j'en ai rien à fiche !",
             checked: false
           }, {
-            txt: 8,
+            txt: "Sans souci.",
             checked: false
           }, {
-            txt: "Je ne sais pas.",
+            txt: "Je ne sais pas. En même temps c'est pas français !",
             checked: false
           }
         ],

@@ -5,25 +5,27 @@
     all = [
       {
         id: 1
+        related: "IHM"
         status: 'none'
         errors: []
-        question: "Combien font 1 + 1 ?"
+        question: "Qui a inventé le code Rousseau de la route ?"
         choix: [
-          {txt:3, checked:false}
-          {txt:2, checked:false}
-          {txt:8, checked:false}
-          {txt:"Je ne sais pas.", checked:false}
+          {txt:"Jean-Jacques Rousseau", checked:false}
+          {txt:"Un pakistanais en slip.", checked:false}
+          {txt:"Louis Rousseau", checked:false}
+          {txt:"La réponse D.", checked:false}
         ]
         aswrIdx:[1]
         selected: []
       }
       {
         id: 2
+        related: "IHM"
         status: 'none'
         errors: []
         question: "Combien font 1 + 2 ?"
         choix: [
-          {txt:3, checked:false}
+          {txt:"3 (est-ce ta dernière bafouille ?)", checked:false}
           {txt:2, checked:false}
           {txt:8, checked:false}
           {txt:"Je ne sais pas.", checked:false}
@@ -33,14 +35,15 @@
       }
       {
         id: 3
+        related: "FAA"
         status: 'none'
         errors: []
-        question: "Combien font 4 + 4 ?"
+        question: "Que signifie Hakuna Matata ?"
         choix: [
-          {txt:3, checked:false}
-          {txt:2, checked:false}
-          {txt:8, checked:false}
-          {txt:"Je ne sais pas.", checked:false}
+          {txt:"LOL", checked:false}
+          {txt:"YOLO, j'en ai rien à fiche !", checked:false}
+          {txt:"Sans souci.", checked:false}
+          {txt:"Je ne sais pas. En même temps c'est pas français !", checked:false}
         ]
         aswrIdx:[2]
         selected: []
