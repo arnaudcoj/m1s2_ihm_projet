@@ -1,6 +1,6 @@
 # m1s2_ihm_projet
 
-###Projet IHM -- Quiz
+###Projet IHM -- Quizee
 
 **Auteurs:** [Arnaud Cojez](https://github.com/arnaudcoj), [Honoré Nintunze](https://github.com/nash403), Pierre-Claver Diarra, Fabien Fache, Salim
 
