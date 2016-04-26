@@ -15,7 +15,7 @@
           {txt:"Louis Rousseau", checked:false}
           {txt:"La réponse D.", checked:false}
         ]
-        aswrIdx:[1]
+        aswrIdx:[2]
         selected: []
       }
       {

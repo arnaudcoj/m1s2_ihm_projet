@@ -24,7 +24,7 @@
       for v in quiz.selected
         quiz.errors.push v if v not in quiz.aswrIdx
       console.log "quiz id", quiz,@all
-      Quizee.save_to_user(quiz,Auth.current()?.id) # TODO
+      if Auth.islogged() then Quizee.save_to_user(quiz,Auth.current()?.id)
       return
 
     return
