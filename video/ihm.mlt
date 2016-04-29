@@ -1,0 +1,784 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mlt LC_NUMERIC="fr_FR.UTF-8" version="6.1.0" title="Shotcut version 16.04.01" producer="main bin">
+  <profile description="automatic" width="1280" height="720" progressive="1" sample_aspect_num="1" sample_aspect_den="1" display_aspect_num="1280" display_aspect_den="720" frame_rate_num="37890000" frame_rate_den="1260973" colorspace="709"/>
+  <playlist id="main bin">
+    <property name="xml_retain">1</property>
+  </playlist>
+  <producer id="black" in="00:00:00,000" out="00:01:05,358">
+    <property name="length">00:01:05,391</property>
+    <property name="eof">pause</property>
+    <property name="resource">black</property>
+    <property name="aspect_ratio">1</property>
+    <property name="mlt_service">color</property>
+    <property name="set.test_audio">0</property>
+  </producer>
+  <playlist id="background">
+    <entry producer="black" in="00:00:00,000" out="00:01:05,358"/>
+  </playlist>
+  <producer id="producer0" title="Anonymous Submission" in="00:00:00,000" out="00:00:12,713">
+    <property name="length">00:00:12,746</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/non0w/Desktop/videos/VIDEO0020.mp4</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="shotcut:hash">fd93eb8f3d5b247aeb2530732b146663</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">VIDEO0020.mp4</property>
+    <property name="shotcut:detail">/home/non0w/Desktop/videos/VIDEO0020.mp4</property>
+    <property name="shotcut:comment"></property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+    <filter id="filter0">
+      <property name="argument">Pierre doit relire son cours... 
+Mais il s'ennuie et peine à se concentrer...</property>
+      <property name="geometry">0/76%:100%x14%</property>
+      <property name="family">Sans</property>
+      <property name="size">101</property>
+      <property name="weight">500</property>
+      <property name="style">normal</property>
+      <property name="fgcolour">#ffffffff</property>
+      <property name="bgcolour">#20000000</property>
+      <property name="olcolour">#ff000000</property>
+      <property name="pad">0</property>
+      <property name="halign">center</property>
+      <property name="valign">bottom</property>
+      <property name="outline">0</property>
+      <property name="mlt_service">dynamictext</property>
+      <property name="shotcut:filter">dynamicText</property>
+      <property name="Mais il s'ennuie et peine à se concentrer..."></property>
+    </filter>
+  </producer>
+  <producer id="producer1" title="Anonymous Submission" in="00:00:00,000" out="00:00:04,692">
+    <property name="length">00:00:04,726</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/non0w/Desktop/videos/VIDEO0035.mp4</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="shotcut:hash">ecdf6684282b15e535a309c9bfc1e677</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">VIDEO0035.mp4</property>
+    <property name="shotcut:detail">/home/non0w/Desktop/videos/VIDEO0035.mp4</property>
+    <property name="shotcut:comment"></property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+    <filter id="filter1">
+      <property name="argument">Pierre doit relire son cours... 
+Mais il s'ennuie et peine à se concentrer...</property>
+      <property name="geometry">0/76%:100%x14%</property>
+      <property name="family">Sans</property>
+      <property name="size">101</property>
+      <property name="weight">500</property>
+      <property name="style">normal</property>
+      <property name="fgcolour">#ffffffff</property>
+      <property name="bgcolour">#20000000</property>
+      <property name="olcolour">#ff000000</property>
+      <property name="pad">0</property>
+      <property name="halign">center</property>
+      <property name="valign">bottom</property>
+      <property name="outline">0</property>
+      <property name="mlt_service">dynamictext</property>
+      <property name="shotcut:filter">dynamicText</property>
+    </filter>
+  </producer>
+  <producer id="producer2" title="Anonymous Submission" in="00:00:00,000" out="00:00:12,713">
+    <property name="length">00:00:12,746</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/non0w/Desktop/videos/VIDEO0020.mp4</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="shotcut:hash">fd93eb8f3d5b247aeb2530732b146663</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">VIDEO0020.mp4</property>
+    <property name="shotcut:detail">/home/non0w/Desktop/videos/VIDEO0020.mp4</property>
+    <property name="shotcut:comment"></property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+    <filter id="filter2">
+      <property name="argument">Pierre doit relire son cours... 
+Mais il s'ennuie et peine à se concentrer...</property>
+      <property name="geometry">0/76%:100%x14%</property>
+      <property name="family">Sans</property>
+      <property name="size">101</property>
+      <property name="weight">500</property>
+      <property name="style">normal</property>
+      <property name="fgcolour">#ffffffff</property>
+      <property name="bgcolour">#20000000</property>
+      <property name="olcolour">#ff000000</property>
+      <property name="pad">0</property>
+      <property name="halign">center</property>
+      <property name="valign">bottom</property>
+      <property name="outline">0</property>
+      <property name="mlt_service">dynamictext</property>
+      <property name="shotcut:filter">dynamicText</property>
+    </filter>
+  </producer>
+  <producer id="producer3" title="Anonymous Submission" in="00:00:00,000" out="00:00:07,188">
+    <property name="length">00:00:07,222</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/non0w/Desktop/videos/VIDEO0023.mp4</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="shotcut:hash">ff0fdb39c273e5fe5deac2bb16447b93</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">VIDEO0023.mp4</property>
+    <property name="shotcut:detail">/home/non0w/Desktop/videos/VIDEO0023.mp4</property>
+    <property name="shotcut:comment"></property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+    <filter id="filter3">
+      <property name="argument">Son ami Paul, qui est sur Quizee, 
+lui lance un défi !</property>
+      <property name="geometry">0/76%:100%x14%</property>
+      <property name="family">Sans</property>
+      <property name="size">101</property>
+      <property name="weight">500</property>
+      <property name="style">normal</property>
+      <property name="fgcolour">#ffffffff</property>
+      <property name="bgcolour">#20000000</property>
+      <property name="olcolour">#ff000000</property>
+      <property name="pad">0</property>
+      <property name="halign">center</property>
+      <property name="valign">bottom</property>
+      <property name="outline">0</property>
+      <property name="mlt_service">dynamictext</property>
+      <property name="shotcut:filter">dynamicText</property>
+    </filter>
+  </producer>
+  <producer id="producer4" title="Anonymous Submission" in="00:00:00,000" out="00:00:02,463">
+    <property name="length">00:00:02,496</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/non0w/Desktop/videos/VIDEO0037.mp4</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="shotcut:hash">cbaf344757735974aba8b08298930dca</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">VIDEO0037.mp4</property>
+    <property name="shotcut:detail">/home/non0w/Desktop/videos/VIDEO0037.mp4</property>
+    <property name="shotcut:comment"></property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+    <filter id="filter4">
+      <property name="argument">Son ami Paul, qui est sur Quizee, 
+lui lance un défi !</property>
+      <property name="geometry">0/76%:100%x14%</property>
+      <property name="family">Sans</property>
+      <property name="size">101</property>
+      <property name="weight">500</property>
+      <property name="style">normal</property>
+      <property name="fgcolour">#ffffffff</property>
+      <property name="bgcolour">#20000000</property>
+      <property name="olcolour">#ff000000</property>
+      <property name="pad">0</property>
+      <property name="halign">center</property>
+      <property name="valign">bottom</property>
+      <property name="outline">0</property>
+      <property name="mlt_service">dynamictext</property>
+      <property name="shotcut:filter">dynamicText</property>
+    </filter>
+  </producer>
+  <producer id="producer5" title="Anonymous Submission" in="00:00:00,000" out="00:00:07,188">
+    <property name="length">00:00:07,222</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/non0w/Desktop/videos/VIDEO0023.mp4</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="shotcut:hash">ff0fdb39c273e5fe5deac2bb16447b93</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">VIDEO0023.mp4</property>
+    <property name="shotcut:detail">/home/non0w/Desktop/videos/VIDEO0023.mp4</property>
+    <property name="shotcut:comment"></property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+    <filter id="filter5">
+      <property name="argument">Pierre, curieux, se rend sur Quizee.
+</property>
+      <property name="geometry">0/76%:100%x14%</property>
+      <property name="family">Sans</property>
+      <property name="size">101</property>
+      <property name="weight">500</property>
+      <property name="style">normal</property>
+      <property name="fgcolour">#ffffffff</property>
+      <property name="bgcolour">#20000000</property>
+      <property name="olcolour">#ff000000</property>
+      <property name="pad">0</property>
+      <property name="halign">center</property>
+      <property name="valign">bottom</property>
+      <property name="outline">0</property>
+      <property name="mlt_service">dynamictext</property>
+      <property name="shotcut:filter">dynamicText</property>
+    </filter>
+  </producer>
+  <producer id="producer6" title="Anonymous Submission" in="00:00:00,000" out="00:00:04,459">
+    <property name="length">00:00:04,493</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/non0w/Desktop/videos/VIDEO0036.mp4</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="shotcut:hash">3936cc9573ea1a5bf5abd20b23cc2298</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">VIDEO0036.mp4</property>
+    <property name="shotcut:detail">/home/non0w/Desktop/videos/VIDEO0036.mp4</property>
+    <property name="shotcut:comment"></property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+    <filter id="filter6">
+      <property name="argument">Pierre, curieux, se rend sur Quizee.
+</property>
+      <property name="geometry">0/76%:100%x14%</property>
+      <property name="family">Sans</property>
+      <property name="size">101</property>
+      <property name="weight">500</property>
+      <property name="style">normal</property>
+      <property name="fgcolour">#ffffffff</property>
+      <property name="bgcolour">#20000000</property>
+      <property name="olcolour">#ff000000</property>
+      <property name="pad">0</property>
+      <property name="halign">center</property>
+      <property name="valign">bottom</property>
+      <property name="outline">0</property>
+      <property name="mlt_service">dynamictext</property>
+      <property name="shotcut:filter">dynamicText</property>
+    </filter>
+  </producer>
+  <producer id="producer7" title="Anonymous Submission" in="00:00:00,000" out="00:00:02,929">
+    <property name="length">00:00:02,962</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/non0w/Desktop/videos/VIDEO0024.mp4</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="shotcut:hash">2727971fc3441448a3a416dc81625f54</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">VIDEO0024.mp4</property>
+    <property name="shotcut:detail">/home/non0w/Desktop/videos/VIDEO0024.mp4</property>
+    <property name="shotcut:comment"></property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+    <filter id="filter7">
+      <property name="argument">Pierre, curieux, se rend sur Quizee...
+Et relève le défi !</property>
+      <property name="geometry">0/76%:100%x14%</property>
+      <property name="family">Sans</property>
+      <property name="size">101</property>
+      <property name="weight">500</property>
+      <property name="style">normal</property>
+      <property name="fgcolour">#ffffffff</property>
+      <property name="bgcolour">#20000000</property>
+      <property name="olcolour">#ff000000</property>
+      <property name="pad">0</property>
+      <property name="halign">center</property>
+      <property name="valign">bottom</property>
+      <property name="outline">0</property>
+      <property name="mlt_service">dynamictext</property>
+      <property name="shotcut:filter">dynamicText</property>
+    </filter>
+  </producer>
+  <producer id="producer8" title="Anonymous Submission" in="00:00:00,000" out="00:00:06,057">
+    <property name="length">00:00:06,090</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/non0w/Desktop/videos/VIDEO0038.mp4</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="shotcut:hash">c1d8e200593e53339f090f230d453a96</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">VIDEO0038.mp4</property>
+    <property name="shotcut:detail">/home/non0w/Desktop/videos/VIDEO0038.mp4</property>
+    <property name="shotcut:comment"></property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+    <filter id="filter8">
+      <property name="argument">Pierre, curieux, se rend sur Quizee...
+Et relève le défi !</property>
+      <property name="geometry">0/76%:100%x14%</property>
+      <property name="family">Sans</property>
+      <property name="size">101</property>
+      <property name="weight">500</property>
+      <property name="style">normal</property>
+      <property name="fgcolour">#ffffffff</property>
+      <property name="bgcolour">#20000000</property>
+      <property name="olcolour">#ff000000</property>
+      <property name="pad">0</property>
+      <property name="halign">center</property>
+      <property name="valign">bottom</property>
+      <property name="outline">0</property>
+      <property name="mlt_service">dynamictext</property>
+      <property name="shotcut:filter">dynamicText</property>
+    </filter>
+  </producer>
+  <producer id="producer9" title="Anonymous Submission" in="00:00:00,000" out="00:00:12,946">
+    <property name="length">00:00:12,979</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/non0w/Desktop/videos/VIDEO0025.mp4</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="shotcut:hash">e204a19dc31b870cb84739bd4db492f8</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">VIDEO0025.mp4</property>
+    <property name="shotcut:detail">/home/non0w/Desktop/videos/VIDEO0025.mp4</property>
+    <property name="shotcut:comment"></property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <producer id="producer10" title="Anonymous Submission" in="00:00:00,000" out="00:00:03,860">
+    <property name="length">00:00:03,894</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/non0w/Desktop/videos/VIDEO0026.mp4</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="shotcut:hash">0b41922aed63f3b4eb9753d786b8b43b</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">VIDEO0026.mp4</property>
+    <property name="shotcut:detail">/home/non0w/Desktop/videos/VIDEO0026.mp4</property>
+    <property name="shotcut:comment"></property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <producer id="producer11" title="Anonymous Submission" in="00:00:00,000" out="00:00:06,057">
+    <property name="length">00:00:06,090</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/non0w/Desktop/videos/VIDEO0038.mp4</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="shotcut:hash">c1d8e200593e53339f090f230d453a96</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">VIDEO0038.mp4</property>
+    <property name="shotcut:detail">/home/non0w/Desktop/videos/VIDEO0038.mp4</property>
+    <property name="shotcut:comment"></property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+    <filter id="filter9">
+      <property name="argument">La deuxième question est délicate...
+</property>
+      <property name="geometry">0/76%:100%x14%</property>
+      <property name="family">Sans</property>
+      <property name="size">101</property>
+      <property name="weight">500</property>
+      <property name="style">normal</property>
+      <property name="fgcolour">#ffffffff</property>
+      <property name="bgcolour">#20000000</property>
+      <property name="olcolour">#ff000000</property>
+      <property name="pad">0</property>
+      <property name="halign">center</property>
+      <property name="valign">bottom</property>
+      <property name="outline">0</property>
+      <property name="mlt_service">dynamictext</property>
+      <property name="shotcut:filter">dynamicText</property>
+    </filter>
+  </producer>
+  <producer id="producer12" title="Anonymous Submission" in="00:00:00,000" out="00:00:07,255">
+    <property name="length">00:00:07,288</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/non0w/Desktop/videos/VIDEO0027.mp4</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="shotcut:hash">9b6e05fcba9d16622d7fb104eb8bea76</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">VIDEO0027.mp4</property>
+    <property name="shotcut:detail">/home/non0w/Desktop/videos/VIDEO0027.mp4</property>
+    <property name="shotcut:comment"></property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+    <filter id="filter10">
+      <property name="argument">La deuxième question est délicate...
+Pierre se rend sur la page du cours liée à la question.</property>
+      <property name="geometry">0/76%:100%x14%</property>
+      <property name="family">Sans</property>
+      <property name="size">101</property>
+      <property name="weight">500</property>
+      <property name="style">normal</property>
+      <property name="fgcolour">#ffffffff</property>
+      <property name="bgcolour">#20000000</property>
+      <property name="olcolour">#ff000000</property>
+      <property name="pad">0</property>
+      <property name="halign">center</property>
+      <property name="valign">bottom</property>
+      <property name="outline">0</property>
+      <property name="mlt_service">dynamictext</property>
+      <property name="shotcut:filter">dynamicText</property>
+    </filter>
+  </producer>
+  <producer id="producer13" title="Anonymous Submission" in="00:00:00,000" out="00:00:14,743">
+    <property name="length">00:00:14,776</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/non0w/Desktop/videos/VIDEO0030.mp4</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="shotcut:hash">04122103ea87fed6f03f90a86560e09d</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">VIDEO0030.mp4</property>
+    <property name="shotcut:detail">/home/non0w/Desktop/videos/VIDEO0030.mp4</property>
+    <property name="shotcut:comment"></property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+    <filter id="filter11">
+      <property name="argument">La deuxième question est délicate...
+Pierre se rend sur la page du cours liée à la question.</property>
+      <property name="geometry">0/76%:100%x14%</property>
+      <property name="family">Sans</property>
+      <property name="size">48</property>
+      <property name="weight">500</property>
+      <property name="style">normal</property>
+      <property name="fgcolour">#ffffffff</property>
+      <property name="bgcolour">#20000000</property>
+      <property name="olcolour">#ff000000</property>
+      <property name="pad">0</property>
+      <property name="halign">center</property>
+      <property name="valign">bottom</property>
+      <property name="outline">0</property>
+      <property name="mlt_service">dynamictext</property>
+      <property name="shotcut:filter">dynamicText</property>
+    </filter>
+  </producer>
+  <producer id="producer14" title="Anonymous Submission" in="00:00:00,000" out="00:00:06,057">
+    <property name="length">00:00:06,090</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/non0w/Desktop/videos/VIDEO0038.mp4</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="shotcut:hash">c1d8e200593e53339f090f230d453a96</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">VIDEO0038.mp4</property>
+    <property name="shotcut:detail">/home/non0w/Desktop/videos/VIDEO0038.mp4</property>
+    <property name="shotcut:comment"></property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <producer id="producer15" title="Anonymous Submission" in="00:00:00,000" out="00:00:04,759">
+    <property name="length">00:00:04,792</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/non0w/Desktop/videos/VIDEO0031.mp4</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="shotcut:hash">025ce313dc4be72003dbb56d1a7277e9</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">VIDEO0031.mp4</property>
+    <property name="shotcut:detail">/home/non0w/Desktop/videos/VIDEO0031.mp4</property>
+    <property name="shotcut:comment"></property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+    <filter id="filter12">
+      <property name="argument">Pierre a compris le cours et 
+sait désormais répondre à la question !</property>
+      <property name="geometry">0/76%:100%x14%</property>
+      <property name="family">Sans</property>
+      <property name="size">101</property>
+      <property name="weight">500</property>
+      <property name="style">normal</property>
+      <property name="fgcolour">#ffffffff</property>
+      <property name="bgcolour">#20000000</property>
+      <property name="olcolour">#ff000000</property>
+      <property name="pad">0</property>
+      <property name="halign">center</property>
+      <property name="valign">bottom</property>
+      <property name="outline">0</property>
+      <property name="mlt_service">dynamictext</property>
+      <property name="shotcut:filter">dynamicText</property>
+    </filter>
+  </producer>
+  <producer id="producer16" title="Anonymous Submission" in="00:00:00,000" out="00:00:06,490">
+    <property name="length">00:00:06,523</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/non0w/Desktop/videos/VIDEO0032.mp4</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="shotcut:hash">7b3c3fadd303c15440ceffb8a083fb3f</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">VIDEO0032.mp4</property>
+    <property name="shotcut:detail">/home/non0w/Desktop/videos/VIDEO0032.mp4</property>
+    <property name="shotcut:comment"></property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+    <filter id="filter13">
+      <property name="argument">Pierre a compris le cours et 
+sait désormais répondre à la question !</property>
+      <property name="geometry">0/76%:100%x14%</property>
+      <property name="family">Sans</property>
+      <property name="size">101</property>
+      <property name="weight">500</property>
+      <property name="style">normal</property>
+      <property name="fgcolour">#ffffffff</property>
+      <property name="bgcolour">#20000000</property>
+      <property name="olcolour">#ff000000</property>
+      <property name="pad">0</property>
+      <property name="halign">center</property>
+      <property name="valign">bottom</property>
+      <property name="outline">0</property>
+      <property name="mlt_service">dynamictext</property>
+      <property name="shotcut:filter">dynamicText</property>
+    </filter>
+  </producer>
+  <producer id="producer17" title="Anonymous Submission" in="00:00:00,000" out="00:00:03,927">
+    <property name="length">00:00:03,960</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/non0w/Desktop/videos/VIDEO0033.mp4</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="shotcut:hash">560c9128118bc24e234612a749f07ed2</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">VIDEO0033.mp4</property>
+    <property name="shotcut:detail">/home/non0w/Desktop/videos/VIDEO0033.mp4</property>
+    <property name="shotcut:comment"></property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+    <filter id="filter14">
+      <property name="argument">Sûr de lui, Pierre confirme ses réponses.</property>
+      <property name="geometry">0/76%:100%x14%</property>
+      <property name="family">Sans</property>
+      <property name="size">101</property>
+      <property name="weight">500</property>
+      <property name="style">normal</property>
+      <property name="fgcolour">#ffffffff</property>
+      <property name="bgcolour">#20000000</property>
+      <property name="olcolour">#ff000000</property>
+      <property name="pad">0</property>
+      <property name="halign">center</property>
+      <property name="valign">bottom</property>
+      <property name="outline">0</property>
+      <property name="mlt_service">dynamictext</property>
+      <property name="shotcut:filter">dynamicText</property>
+    </filter>
+  </producer>
+  <producer id="producer18" title="Anonymous Submission" in="00:00:00,000" out="00:00:05,458">
+    <property name="length">00:00:05,491</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/non0w/Desktop/videos/VIDEO0034.mp4</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="shotcut:hash">3891d242dd60277472e74bac680cbad5</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">VIDEO0034.mp4</property>
+    <property name="shotcut:detail">/home/non0w/Desktop/videos/VIDEO0034.mp4</property>
+    <property name="shotcut:comment"></property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+    <filter id="filter15">
+      <property name="argument">Bravo Pierre !
+Tu connais ton cours !</property>
+      <property name="geometry">0/76%:100%x14%</property>
+      <property name="family">Sans</property>
+      <property name="size">101</property>
+      <property name="weight">500</property>
+      <property name="style">normal</property>
+      <property name="fgcolour">#ffffffff</property>
+      <property name="bgcolour">#20000000</property>
+      <property name="olcolour">#ff000000</property>
+      <property name="pad">0</property>
+      <property name="halign">center</property>
+      <property name="valign">bottom</property>
+      <property name="outline">0</property>
+      <property name="mlt_service">dynamictext</property>
+      <property name="shotcut:filter">dynamicText</property>
+    </filter>
+  </producer>
+  <producer id="producer19" title="Anonymous Submission" in="00:00:00,000" out="00:00:02,063">
+    <property name="length">00:00:02,097</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/non0w/Desktop/videos/VIDEO0039.mp4</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="shotcut:hash">d2dce7e316324e1d194d77b6ddf44965</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">VIDEO0039.mp4</property>
+    <property name="shotcut:detail">/home/non0w/Desktop/videos/VIDEO0039.mp4</property>
+    <property name="shotcut:comment"></property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+    <filter id="filter16">
+      <property name="argument">Bravo Pierre !
+Tu connais ton cours !</property>
+      <property name="geometry">0/76%:100%x14%</property>
+      <property name="family">Sans</property>
+      <property name="size">101</property>
+      <property name="weight">500</property>
+      <property name="style">normal</property>
+      <property name="fgcolour">#ffffffff</property>
+      <property name="bgcolour">#20000000</property>
+      <property name="olcolour">#ff000000</property>
+      <property name="pad">0</property>
+      <property name="halign">center</property>
+      <property name="valign">bottom</property>
+      <property name="outline">0</property>
+      <property name="mlt_service">dynamictext</property>
+      <property name="shotcut:filter">dynamicText</property>
+    </filter>
+  </producer>
+  <producer id="producer20" title="Anonymous Submission" in="00:00:00,000" out="00:00:05,458">
+    <property name="length">00:00:05,491</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/non0w/Desktop/videos/VIDEO0034.mp4</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="shotcut:hash">3891d242dd60277472e74bac680cbad5</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">VIDEO0034.mp4</property>
+    <property name="shotcut:detail">/home/non0w/Desktop/videos/VIDEO0034.mp4</property>
+    <property name="shotcut:comment"></property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+    <filter id="filter17">
+      <property name="argument">Tu peux maintenant relancer 
+un défi à Paul !</property>
+      <property name="geometry">0/76%:100%x14%</property>
+      <property name="family">Sans</property>
+      <property name="size">101</property>
+      <property name="weight">500</property>
+      <property name="style">normal</property>
+      <property name="fgcolour">#ffffffff</property>
+      <property name="bgcolour">#20000000</property>
+      <property name="olcolour">#ff000000</property>
+      <property name="pad">0</property>
+      <property name="halign">center</property>
+      <property name="valign">bottom</property>
+      <property name="outline">0</property>
+      <property name="mlt_service">dynamictext</property>
+      <property name="shotcut:filter">dynamicText</property>
+    </filter>
+  </producer>
+  <producer id="producer21" title="Anonymous Submission" in="00:00:00,000" out="00:00:02,063">
+    <property name="length">00:00:02,097</property>
+    <property name="eof">pause</property>
+    <property name="resource">/home/non0w/Desktop/videos/VIDEO0039.mp4</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="shotcut:hash">d2dce7e316324e1d194d77b6ddf44965</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">VIDEO0039.mp4</property>
+    <property name="shotcut:detail">/home/non0w/Desktop/videos/VIDEO0039.mp4</property>
+    <property name="shotcut:comment"></property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <playlist id="playlist0">
+    <property name="shotcut:video">1</property>
+    <property name="shotcut:name">V1</property>
+    <entry producer="producer0" in="00:00:00,000" out="00:00:00,899"/>
+    <entry producer="producer1" in="00:00:00,000" out="00:00:02,729"/>
+    <entry producer="producer2" in="00:00:05,658" out="00:00:09,085"/>
+    <entry producer="producer3" in="00:00:00,000" out="00:00:03,395"/>
+    <entry producer="producer4" in="00:00:00,000" out="00:00:01,797"/>
+    <entry producer="producer5" in="00:00:03,428" out="00:00:06,423"/>
+    <entry producer="producer6" in="00:00:01,364" out="00:00:03,095"/>
+    <entry producer="producer7" in="00:00:00,000" out="00:00:01,697"/>
+    <entry producer="producer8" in="00:00:00,000" out="00:00:01,464"/>
+    <entry producer="producer9" in="00:00:03,428" out="00:00:07,754"/>
+    <entry producer="producer10" in="00:00:00,000" out="00:00:03,860"/>
+    <entry producer="producer11" in="00:00:03,361" out="00:00:05,458"/>
+    <entry producer="producer12" in="00:00:00,000" out="00:00:05,491"/>
+    <entry producer="producer13" in="00:00:00,000" out="00:00:07,089"/>
+    <entry producer="producer14" in="00:00:01,498" out="00:00:03,328"/>
+    <entry producer="producer15" in="00:00:00,000" out="00:00:02,995"/>
+    <entry producer="producer16" in="00:00:00,000" out="00:00:05,458"/>
+    <entry producer="producer17" in="00:00:00,000" out="00:00:03,927"/>
+    <entry producer="producer18" in="00:00:00,000" out="00:00:01,697"/>
+    <entry producer="producer19" in="00:00:00,000" out="00:00:01,231"/>
+    <entry producer="producer20" in="00:00:01,731" out="00:00:05,458"/>
+    <entry producer="producer21" in="00:00:01,265" out="00:00:02,063"/>
+  </playlist>
+  <tractor id="tractor0" title="Shotcut version 16.04.01" global_feed="1" in="00:00:00,000" out="00:01:05,358">
+    <property name="shotcut">1</property>
+    <property name="shotcut:scaleFactor">1,03912</property>
+    <track producer="background"/>
+    <track producer="playlist0" hide="audio"/>
+    <transition id="transition0">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="mlt_service">mix</property>
+      <property name="always_active">1</property>
+      <property name="combine">1</property>
+    </transition>
+    <transition id="transition1">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="version">0,9</property>
+      <property name="mlt_service">frei0r.cairoblend</property>
+      <property name="disable">1</property>
+    </transition>
+  </tractor>
+</mlt>
