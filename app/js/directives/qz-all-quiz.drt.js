@@ -40,7 +40,9 @@ var indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i 
         }
       }
       console.log("quiz id", quiz, this.all);
-      Quizee.save_to_user(quiz, (ref1 = Auth.current()) != null ? ref1.id : void 0);
+      if (Auth.islogged()) {
+        Quizee.save_to_user(quiz, (ref1 = Auth.current()) != null ? ref1.id : void 0);
+      }
     };
   };
   AllQuizCtrl.$inject = ['$state', 'Auth', 'Quizee'];

@@ -25,7 +25,7 @@
             checked: false
           }
         ],
-        aswrIdx: [1],
+        aswrIdx: [2],
         selected: []
       }, {
         id: 2,
