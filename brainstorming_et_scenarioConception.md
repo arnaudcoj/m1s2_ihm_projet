@@ -1,4 +1,4 @@
-#### _ Auteurs: Arnaud Cojez, Fabien Fache, Pierre-Claver Diarra, Salim Aissaoui et Honoré Nintunze._
+#### _Auteurs: Arnaud Cojez, Fabien Fache, Pierre-Claver Diarra, Salim Aissaoui et Honoré Nintunze._
 
 # Brainstorming
 _Les idées retenues sont celles en **gras**, chaque membre du groupe a choisi 3 solutions._
